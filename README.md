@@ -22,4 +22,4 @@ References:
   * Comprehensions_soultion.py
   - C:\Users\18329\OneDrive\Desktop\DATA_ANALYTICS\UCB BOOTCAMP ACT\03-Python\3\Activities\04-Evr_List_Comprehensions\Solved\comprehensions_solution.py
 
-Slack Overflow
+* Slack Overflow

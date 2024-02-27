@@ -1,7 +1,7 @@
 import csv
 import os
 
-budget_csv = os.path.join("..", "Resources", "budget_data.csv")
+budget_csv = os.path.join("Resources", "budget_data.csv")
 
 with open(budget_csv) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
@@ -19,13 +19,6 @@ with open(budget_csv) as csvfile:
          # add profit/loss
         total_prof.append(int(row[1]))
 
-        
-print("Financial Analysis")
-print("----------------------------")
-print("Total Months:", len(total_months))
-print("Total: $", sum(total_prof))
-
-
 for row in range(1,len(total_prof)):
     monthly_change.append(total_prof[row]-total_prof[row-1])
     
@@ -38,7 +31,11 @@ for row in range(1,len(total_prof)):
     #determine the day of greatest change
     dayOf_GreatInc = total_months[monthly_change.index(greatest_increase)+1]
     dayOf_GreatDec = total_months[monthly_change.index(greatest_decrease)+1]
-    
+
+print("Financial Analysis")
+print("----------------------------")
+print("Total Months:", len(total_months))
+print("Total: $", sum(total_prof))
 # print avg change, greatest increase, and decrease
 print("Average Change:", rounded)
 print("Greatest Increase in Profits:", (dayOf_GreatInc),"($",greatest_increase,")")
